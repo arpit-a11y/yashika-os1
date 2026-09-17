@@ -1,0 +1,616 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+ 
+<head> 
+ 
+    <meta charset="UTF-8"> 
+ 
+    <meta 
+        name="viewport" 
+        content="width=device-width, initial-scale=1.0" 
+    > 
+ 
+    <title>YASHIKA OS 2.0 💗</title> 
+ 
+    <link 
+        rel="stylesheet" 
+        href="style.css" 
+    > 
+ 
+</head> 
+ 
+ 
+<body> 
+ 
+ 
+    <!-- ================================================= 
+         BOOT SCREEN 
+    ================================================== --> 
+ 
+    <div id="boot-screen"> 
+ 
+        <div class="terminal"> 
+ 
+            <div class="terminal-title"> 
+                YASHIKA OS v2.0 💗 
+            </div> 
+ 
+            <div id="boot-text"></div> 
+ 
+            <div class="loading-bar"> 
+ 
+                <div id="loading-progress"></div> 
+ 
+            </div> 
+ 
+            <div id="loading-percent"> 
+                0% 
+            </div> 
+ 
+        </div> 
+ 
+    </div> 
+ 
+ 
+ 
+    <!-- ================================================= 
+         RELATIONSHIP ALERT 
+    ================================================== --> 
+ 
+    <div id="alert-screen"> 
+ 
+        <div class="alert-box"> 
+ 
+            <div class="warning-icon"> 
+                ⚠️ 
+            </div> 
+ 
+            <h1> 
+                RELATIONSHIP.EXE DETECTED 
+            </h1> 
+ 
+            <p class="alert-text"> 
+                An outdated relationship has been detected 
+                in Yashika's system. 
+            </p> 
+ 
+ 
+            <div class="system-info"> 
+ 
+                <p> 
+                    <span>USER:</span> 
+                    Yashika 
+                </p> 
+ 
+                <p> 
+                    <span>FILE:</span> 
+                    relationship.exe 
+                </p> 
+ 
+                <p> 
+                    <span>STATUS:</span> 
+                    <b>UNSTABLE</b> 
+                </p> 
+ 
+                <p> 
+                    <span>SYSTEM:</span> 
+                    Yashika OS 
+                </p> 
+ 
+            </div> 
+ 
+ 
+            <p class="question"> 
+                Would you like to uninstall? 
+            </p> 
+ 
+ 
+            <button id="uninstall-btn"> 
+                🗑️ UNINSTALL RELATIONSHIP.EXE 
+            </button> 
+ 
+        </div> 
+ 
+    </div> 
+ 
+ 
+ 
+    <!-- ================================================= 
+         UNINSTALL SCREEN 
+    ================================================== --> 
+ 
+    <div id="uninstall-screen"> 
+ 
+        <div class="uninstall-box"> 
+ 
+            <div class="terminal-title"> 
+                YASHIKA OS — SYSTEM CLEANUP 
+            </div> 
+ 
+            <div id="uninstall-text"> 
+                Preparing uninstall... 
+            </div> 
+ 
+            <div class="loading-bar"> 
+ 
+                <div id="uninstall-progress"></div> 
+ 
+            </div> 
+ 
+            <div id="uninstall-percent"> 
+                0% 
+            </div> 
+ 
+        </div> 
+ 
+    </div> 
+ 
+ 
+ 
+    <!-- ================================================= 
+         RECOVERY SCREEN 
+    ================================================== --> 
+ 
+    <div id="recovery-screen"> 
+ 
+        <div class="recovery-box"> 
+ 
+            <div class="success-icon"> 
+                ✓ 
+            </div> 
+ 
+            <h1> 
+                SYSTEM RECOVERY COMPLETE 
+            </h1> 
+ 
+            <p> 
+                Relationship.exe has been successfully removed. 
+            </p> 
+ 
+            <p class="small-text"> 
+                No important memories were deleted. 💗 
+            </p> 
+ 
+            <button id="continue-btn"> 
+                ✨ CONTINUE 
+            </button> 
+ 
+        </div> 
+ 
+    </div> 
+ 
+ 
+ 
+    <!-- ================================================= 
+         MAIN DASHBOARD 
+    ================================================== --> 
+ 
+    <div id="dashboard"> 
+ 
+ 
+        <!-- HEADER --> 
+ 
+        <header class="dashboard-header"> 
+ 
+            <div> 
+ 
+                <div class="os-label"> 
+                    YASHIKA OS v2.0 
+                </div> 
+ 
+                <h1> 
+                    Welcome back, 
+                    <span>Yashika</span> 💗 
+                </h1> 
+ 
+                <p> 
+                    Your system has been successfully restored. ✨ 
+                </p> 
+ 
+            </div> 
+ 
+ 
+            <div class="status"> 
+                ● SYSTEM ONLINE 
+            </div> 
+ 
+        </header> 
+ 
+ 
+ 
+        <!-- ================================================= 
+             SYSTEM STATUS 
+        ================================================== --> 
+ 
+        <section class="status-panel"> 
+ 
+ 
+            <div class="status-card"> 
+ 
+                <div class="status-number"> 
+                    100% 
+                </div> 
+ 
+                <div> 
+                    Happiness 
+                </div> 
+ 
+            </div> 
+ 
+ 
+            <div class="status-card"> 
+ 
+                <div class="status-number"> 
+                    100% 
+                </div> 
+ 
+                <div> 
+                    Self-Worth 
+                </div> 
+ 
+            </div> 
+ 
+ 
+            <div class="status-card"> 
+ 
+                <div class="status-number"> 
+                    ∞ 
+                </div> 
+ 
+                <div> 
+                    Potential 
+                </div> 
+ 
+            </div> 
+ 
+        </section> 
+ 
+ 
+ 
+        <!-- ================================================= 
+             MESSAGE FROM BROTHER 
+        ================================================== --> 
+ 
+        <section class="message-card"> 
+ 
+            <div class="card-icon"> 
+                💌 
+            </div> 
+ 
+            <h2> 
+                A message from your brother 
+            </h2> 
+ 
+ 
+            <p> 
+                Tera bhai hai tere saath, 
+                chahe koi ho ya na ho. ❤️ 
+            </p> 
+ 
+ 
+            <p> 
+                Yashika, life mein kuch log aate hain, 
+                kuch memories dete hain aur phir chale jaate hain. 
+                Lekin iska matlab yeh nahi ki tumhari value 
+                unke rehne ya jaane se decide hoti hai. 
+            </p> 
+ 
+ 
+            <p> 
+                Tu jaisi hai, waise hi bohot special hai. 
+                Isliye kisi ek chapter ke khatam hone ki wajah se 
+                apni poori kahani ko mat bhoolna. 
+            </p> 
+ 
+ 
+            <p> 
+                Aur jab kabhi lage ki sab kuch thoda zyada ho raha hai, 
+                bas yaad rakh — 
+                <strong>tera bhai hai tere saath.</strong> 
+                Main hoon, aur tujhe akela handle karne 
+                ki zarurat nahi hai. ❤️ 
+            </p> 
+ 
+ 
+            <p> 
+                Ab thoda smile kar, thoda chill kar, 
+                aur apni life ka next chapter likh. 🌸✨ 
+            </p> 
+ 
+        </section> 
+ 
+ 
+ 
+        <!-- ================================================= 
+             FEATURES 
+        ================================================== --> 
+ 
+        <section class="features"> 
+ 
+ 
+            <!-- MEMORIES --> 
+ 
+            <div class="feature-card"> 
+ 
+                <div class="feature-icon"> 
+                    📸 
+                </div> 
+ 
+                <h3> 
+                    Our Memories 
+                </h3> 
+ 
+                <p> 
+                    A collection of moments worth keeping. 
+                </p> 
+ 
+                <button id="memories-btn"> 
+                    OPEN 
+                </button> 
+ 
+            </div> 
+ 
+ 
+ 
+            <!-- SMILE --> 
+ 
+            <div class="feature-card"> 
+ 
+                <div class="feature-icon"> 
+                    😂 
+                </div> 
+ 
+                <h3> 
+                    Make Me Smile 
+                </h3> 
+ 
+                <p> 
+                    Emergency happiness generator. 
+                </p> 
+ 
+                <button id="smile-btn"> 
+                    ACTIVATE 
+                </button> 
+ 
+            </div> 
+ 
+ 
+ 
+            <!-- PLAYLIST --> 
+ 
+            <div class="feature-card"> 
+ 
+                <div class="feature-icon"> 
+                    🎵 
+                </div> 
+ 
+                <h3> 
+                    Comeback Playlist 
+                </h3> 
+ 
+                <p> 
+                    Music for the next chapter. 
+                </p> 
+ 
+                <button id="playlist-btn"> 
+                    OPEN 
+                </button> 
+ 
+            </div> 
+ 
+        </section> 
+ 
+ 
+ 
+        <!-- SMILE MESSAGE --> 
+ 
+        <div id="smile-message"></div> 
+ 
+ 
+ 
+        <!-- ================================================= 
+             📸 MEMORIES POPUP 
+        ================================================== --> 
+ 
+        <div id="memories-modal"> 
+ 
+            <div class="memories-box"> 
+ 
+                <button id="close-memories"> 
+                    ✕ 
+                </button> 
+ 
+                <div class="memories-title"> 
+                    📸 Our Little Memory Box 💗 
+                </div> 
+ 
+                <p> 
+                    Some moments are just too precious to delete. 🥹 
+                </p> 
+ 
+ 
+                <div class="memory-grid"> 
+ 
+ 
+                    <!-- PHOTO --> 
+ 
+                    <div class="memory-item"> 
+ 
+                        <img 
+                            src="memories/memory1.png" 
+                            alt="Our memory" 
+                        > 
+ 
+                        <p> 
+                            One of our many random moments 😂❤️ 
+                        </p> 
+ 
+                    </div> 
+ 
+ 
+ 
+                    <!-- VIDEO --> 
+ 
+                    <div class="memory-item"> 
+ 
+                        <video controls> 
+ 
+                            <source 
+                                src="memories/memory2.mp4" 
+                                type="video/mp4" 
+                            > 
+ 
+                            Your browser does not support video. 
+ 
+                        </video> 
+ 
+                        <p> 
+                            Another memory that deserves to stay. 🥹 
+                        </p> 
+ 
+                    </div> 
+ 
+ 
+                </div> 
+ 
+            </div> 
+ 
+        </div> 
+ 
+ 
+ 
+        <!-- ================================================= 
+             🎵 COMEBACK PLAYLIST POPUP 
+        ================================================== --> 
+ 
+        <div id="playlist-modal"> 
+ 
+            <div class="playlist-box"> 
+ 
+                <button id="close-playlist"> 
+                    ✕ 
+                </button> 
+ 
+ 
+                <div class="playlist-icon"> 
+                    🎵 
+                </div> 
+ 
+ 
+                <div class="playlist-title"> 
+                    Comeback Playlist ✨ 
+                </div> 
+ 
+ 
+                <p class="playlist-subtitle"> 
+                    Soundtrack for Yashika's next chapter. 💗 
+                </p> 
+ 
+ 
+                <div class="song-card"> 
+ 
+                    <div class="song-cover"> 
+                        🎧 
+                    </div> 
+ 
+                    <div class="song-info"> 
+ 
+                        <h3> 
+                            Yashika's Comeback 
+                        </h3> 
+ 
+                        <p> 
+                            Personal soundtrack 💗 
+                        </p> 
+ 
+                    </div> 
+ 
+                </div> 
+ 
+ 
+                <div class="playlist-controls"> 
+ 
+                    <button id="playlist-play"> 
+                        ▶️ PLAY 
+                    </button> 
+ 
+                    <button id="playlist-pause"> 
+                        ⏸️ PAUSE 
+                    </button> 
+ 
+                </div> 
+ 
+ 
+                <label 
+                    class="volume-label" 
+                    for="playlist-volume" 
+                > 
+                    🔊 Volume 
+                </label> 
+ 
+ 
+                <input 
+                    id="playlist-volume" 
+                    type="range" 
+                    min="0" 
+                    max="1" 
+                    step="0.01" 
+                    value="0.12" 
+                > 
+ 
+ 
+                <p id="playlist-status"> 
+                    Ready when you are. 🌸 
+                </p> 
+ 
+            </div> 
+ 
+        </div> 
+ 
+ 
+ 
+        <!-- ================================================= 
+             FOOTER 
+        ================================================== --> 
+ 
+        <footer> 
+ 
+            <p> 
+                Made specially for Yashika 💗 
+            </p> 
+ 
+            <p> 
+                From your annoying brother 😂 
+            </p> 
+ 
+        </footer> 
+ 
+ 
+    </div> 
+ 
+ 
+ 
+    <!-- ================================================= 
+         BACKGROUND MUSIC 
+    ================================================== --> 
+ 
+    <audio 
+        id="background-music" 
+        loop 
+    > 
+ 
+        <source 
+            src="memories/bg-music.mp3" 
+            type="audio/mpeg" 
+        > 
+ 
+    </audio> 
+ 
+ 
+ 
+    <script src="script.js"></script> 
+ 
+ 
+</body> 
+ 
+</html>  
