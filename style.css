@@ -1,0 +1,588 @@
+/* ===================================================== 
+   🌸 SISTER OS 2.0 — PASTEL UI 
+===================================================== */ 
+ 
+* { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+} 
+ 
+body { 
+    font-family: "Segoe UI", sans-serif; 
+    background: linear-gradient(135deg, #ffe4ef, #e9dcff, #dff6ff); 
+    min-height: 100vh; 
+    color: #444; 
+} 
+ 
+/* ===================================================== 
+   💻 BOOT SCREEN 
+===================================================== */ 
+ 
+#boot-screen { 
+    min-height: 100vh; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    padding: 20px; 
+} 
+ 
+.terminal { 
+    width: 95%; 
+    max-width: 700px; 
+    background: #17151d; 
+    color: #eee; 
+    padding: 30px; 
+    border-radius: 20px; 
+    box-shadow: 0 25px 60px rgba(0,0,0,0.3); 
+    font-family: monospace; 
+} 
+ 
+.terminal h1 { 
+    color: #ff9fc4; 
+    margin-bottom: 20px; 
+} 
+ 
+.terminal p { 
+    margin: 10px 0; 
+    line-height: 1.6; 
+} 
+ 
+.loading { 
+    margin-top: 20px; 
+    color: #bfa6ff; 
+} 
+ 
+/* ===================================================== 
+   ⚠️ ALERT SCREEN 
+===================================================== */ 
+ 
+#alert-screen, 
+#uninstall-screen, 
+#recovery-screen { 
+    min-height: 100vh; 
+    display: none; 
+    justify-content: center; 
+    align-items: center; 
+    padding: 20px; 
+} 
+ 
+.alert-box, 
+.uninstall-box, 
+.recovery-box { 
+    width: 95%; 
+    max-width: 600px; 
+    background: white; 
+    padding: 40px; 
+    border-radius: 30px; 
+    text-align: center; 
+    box-shadow: 0 25px 70px rgba(0,0,0,0.2); 
+} 
+ 
+.alert-box h1 { 
+    color: #e76f9b; 
+    margin-bottom: 15px; 
+} 
+ 
+.alert-box p, 
+.uninstall-box p, 
+.recovery-box p { 
+    line-height: 1.7; 
+    color: #666; 
+} 
+ 
+/* ===================================================== 
+   🔘 BUTTONS 
+===================================================== */ 
+ 
+button { 
+    border: none; 
+    padding: 13px 22px; 
+    border-radius: 15px; 
+    font-size: 15px; 
+    font-weight: bold; 
+    cursor: pointer; 
+    transition: 0.25s; 
+    background: #f28bb0; 
+    color: white; 
+} 
+ 
+button:hover { 
+    transform: translateY(-3px); 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.12); 
+} 
+ 
+button:active { 
+    transform: scale(0.96); 
+} 
+ 
+/* ===================================================== 
+   🗑️ UNINSTALL 
+===================================================== */ 
+ 
+.uninstall-box h1 { 
+    color: #d96c92; 
+    margin-bottom: 20px; 
+} 
+ 
+.progress { 
+    width: 100%; 
+    height: 15px; 
+    background: #eee; 
+    border-radius: 20px; 
+    overflow: hidden; 
+    margin: 25px 0; 
+} 
+ 
+.progress-bar { 
+    width: 0%; 
+    height: 100%; 
+    background: linear-gradient(90deg, #ff9fc4, #c99cff); 
+    transition: width 0.3s; 
+} 
+ 
+/* ===================================================== 
+   💖 RECOVERY 
+===================================================== */ 
+ 
+.recovery-box h1 { 
+    color: #c77be8; 
+    margin-bottom: 20px; 
+} 
+ 
+.recovery-box .heart { 
+    font-size: 60px; 
+    margin-bottom: 15px; 
+} 
+ 
+/* ===================================================== 
+   🌸 DASHBOARD 
+===================================================== */ 
+ 
+#dashboard { 
+    display: none; 
+    min-height: 100vh; 
+    padding: 40px 20px; 
+} 
+ 
+.dashboard-container { 
+    max-width: 1100px; 
+    margin: auto; 
+} 
+ 
+.dashboard-header { 
+    text-align: center; 
+    margin-bottom: 35px; 
+} 
+ 
+.dashboard-header h1 { 
+    font-size: 42px; 
+    color: #d65f8d; 
+} 
+ 
+.dashboard-header p { 
+    margin-top: 10px; 
+    color: #777; 
+} 
+ 
+/* ===================================================== 
+   📊 STATUS CARDS 
+===================================================== */ 
+ 
+.status-grid { 
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; 
+    margin-bottom: 30px; 
+} 
+ 
+.status-card { 
+    background: rgba(255,255,255,0.85); 
+    padding: 25px; 
+    border-radius: 25px; 
+    text-align: center; 
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08); 
+    transition: 0.25s; 
+} 
+ 
+.status-card:hover { 
+    transform: translateY(-5px); 
+} 
+ 
+.status-card .icon { 
+    font-size: 38px; 
+    margin-bottom: 10px; 
+} 
+ 
+.status-card h3 { 
+    color: #555; 
+    margin-bottom: 8px; 
+} 
+ 
+.status-card p { 
+    color: #888; 
+} 
+ 
+/* ===================================================== 
+   💌 MESSAGE CARD 
+===================================================== */ 
+ 
+.message-card { 
+    background: linear-gradient(145deg, #ffffff, #fff2f8); 
+    padding: 40px; 
+    border-radius: 30px; 
+    text-align: center; 
+    box-shadow: 0 20px 50px rgba(0,0,0,0.1); 
+    margin-bottom: 30px; 
+} 
+ 
+.message-card h2 { 
+    color: #d65f8d; 
+    margin-bottom: 20px; 
+} 
+ 
+.message-card p { 
+    line-height: 1.8; 
+    color: #666; 
+    margin-bottom: 10px; 
+} 
+ 
+/* ===================================================== 
+   🎮 FEATURE CARDS 
+===================================================== */ 
+ 
+.features { 
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; 
+} 
+ 
+.feature-card { 
+    background: white; 
+    padding: 30px 20px; 
+    border-radius: 25px; 
+    text-align: center; 
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08); 
+    cursor: pointer; 
+    transition: 0.25s; 
+} 
+ 
+.feature-card:hover { 
+    transform: translateY(-7px) rotate(-1deg); 
+} 
+ 
+.feature-card .feature-icon { 
+    font-size: 45px; 
+    margin-bottom: 15px; 
+} 
+ 
+.feature-card h3 { 
+    color: #555; 
+    margin-bottom: 8px; 
+} 
+ 
+.feature-card p { 
+    color: #888; 
+    line-height: 1.5; 
+} 
+ 
+/* ===================================================== 
+   😊 HAPPINESS MESSAGE 
+===================================================== */ 
+ 
+#smile-message { 
+    display: none; 
+    margin-top: 20px; 
+    background: #fff; 
+    padding: 20px; 
+    border-radius: 20px; 
+    text-align: center; 
+    color: #d65f8d; 
+    font-weight: bold; 
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08); 
+} 
+ 
+/* ===================================================== 
+   🖼️ MEMORIES MODAL 
+===================================================== */ 
+ 
+#memories-modal { 
+    position: fixed; 
+    inset: 0; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    background: rgba(30, 20, 35, 0.65); 
+    backdrop-filter: blur(8px); 
+    opacity: 0; 
+    visibility: hidden; 
+    transition: 0.3s; 
+    z-index: 2000; 
+    padding: 20px; 
+} 
+ 
+#memories-modal.show { 
+    opacity: 1; 
+    visibility: visible; 
+} 
+ 
+.memories-box { 
+    position: relative; 
+    width: 95%; 
+    max-width: 900px; 
+    max-height: 90vh; 
+    overflow-y: auto; 
+    background: linear-gradient(145deg, #ffffff, #fff3f8); 
+    border-radius: 30px; 
+    padding: 35px; 
+    box-shadow: 0 30px 80px rgba(0,0,0,0.3); 
+    transform: scale(0.8); 
+    transition: 0.3s; 
+} 
+ 
+#memories-modal.show .memories-box { 
+    transform: scale(1); 
+} 
+ 
+#close-memories { 
+    position: absolute; 
+    top: 15px; 
+    right: 15px; 
+    width: 42px; 
+    height: 42px; 
+    padding: 0; 
+    border-radius: 50%; 
+    background: #ffe1ec; 
+    color: #d85e89; 
+    font-size: 18px; 
+} 
+ 
+.memories-box h2 { 
+    text-align: center; 
+    color: #d65f8d; 
+    margin-bottom: 25px; 
+} 
+ 
+.memory-grid { 
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px; 
+} 
+ 
+.memory-card { 
+    background: white; 
+    padding: 15px; 
+    border-radius: 20px; 
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08); 
+} 
+ 
+.memory-card img, 
+.memory-card video { 
+    width: 100%; 
+    border-radius: 15px; 
+    display: block; 
+} 
+ 
+.memory-card p { 
+    text-align: center; 
+    margin-top: 10px; 
+    color: #777; 
+} 
+ 
+/* ===================================================== 
+   🎵 PLAYLIST MODAL 
+===================================================== */ 
+ 
+#playlist-modal { 
+    position: fixed; 
+    inset: 0; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    background: rgba(30, 20, 35, 0.65); 
+    backdrop-filter: blur(8px); 
+    opacity: 0; 
+    visibility: hidden; 
+    transition: 0.3s; 
+    z-index: 2100; 
+    padding: 20px; 
+} 
+ 
+#playlist-modal.show { 
+    opacity: 1; 
+    visibility: visible; 
+} 
+ 
+.playlist-box { 
+    position: relative; 
+    width: 95%; 
+    max-width: 520px; 
+    background: linear-gradient(145deg, #ffffff, #fff2f8); 
+    border-radius: 30px; 
+    padding: 38px; 
+    text-align: center; 
+    box-shadow: 0 30px 80px rgba(0,0,0,0.3); 
+    transform: scale(0.8); 
+    transition: 0.3s; 
+} 
+ 
+#playlist-modal.show .playlist-box { 
+    transform: scale(1); 
+} 
+ 
+#close-playlist { 
+    position: absolute; 
+    top: 15px; 
+    right: 15px; 
+    width: 42px; 
+    height: 42px; 
+    padding: 0; 
+    border-radius: 50%; 
+    background: #ffe1ec; 
+    color: #d85e89; 
+    font-size: 18px; 
+} 
+ 
+.playlist-icon { 
+    font-size: 55px; 
+    margin-bottom: 8px; 
+} 
+ 
+.playlist-title { 
+    font-size: 30px; 
+    font-weight: bold; 
+    color: #d85e89; 
+} 
+ 
+.playlist-subtitle { 
+    color: #777; 
+    line-height: 1.6; 
+    margin-top: 8px; 
+} 
+ 
+/* Song */ 
+ 
+.song-card { 
+    display: flex; 
+    align-items: center; 
+    gap: 18px; 
+    text-align: left; 
+    background: white; 
+    padding: 18px; 
+    border-radius: 20px; 
+    margin: 25px 0; 
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08); 
+} 
+ 
+.song-cover { 
+    width: 70px; 
+    height: 70px; 
+    flex-shrink: 0; 
+    border-radius: 18px; 
+    background: linear-gradient(135deg, #ff9fc4, #c99cff); 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    font-size: 34px; 
+} 
+ 
+.song-info h3 { 
+    margin: 0 0 6px; 
+    color: #444; 
+} 
+ 
+.song-info p { 
+    margin: 0; 
+    color: #888; 
+} 
+ 
+/* Controls */ 
+ 
+.playlist-controls { 
+    display: flex; 
+    justify-content: center; 
+    gap: 12px; 
+    flex-wrap: wrap; 
+} 
+ 
+.playlist-controls button { 
+    background: #f28bb0; 
+    color: white; 
+} 
+ 
+.playlist-controls button:hover { 
+    background: #df709a; 
+} 
+ 
+.volume-label { 
+    display: block; 
+    margin-top: 25px; 
+    margin-bottom: 8px; 
+    color: #777; 
+    font-weight: bold; 
+} 
+ 
+#playlist-volume { 
+    width: 100%; 
+    accent-color: #e77aa4; 
+    cursor: pointer; 
+} 
+ 
+#playlist-status { 
+    min-height: 24px; 
+    margin-top: 20px; 
+    color: #d65f8d; 
+    font-weight: bold; 
+    line-height: 1.5; 
+} 
+ 
+/* ===================================================== 
+   📱 MOBILE 
+===================================================== */ 
+ 
+@media (max-width: 750px) { 
+ 
+    .status-grid, 
+    .features { 
+        grid-template-columns: 1fr; 
+    } 
+ 
+    .dashboard-header h1 { 
+        font-size: 32px; 
+    } 
+ 
+    .message-card { 
+        padding: 28px 20px; 
+    } 
+ 
+    .memory-grid { 
+        grid-template-columns: 1fr; 
+    } 
+ 
+    .playlist-box { 
+        padding: 30px 20px; 
+    } 
+ 
+    .playlist-title { 
+        font-size: 25px; 
+    } 
+ 
+    .song-card { 
+        align-items: flex-start; 
+    } 
+ 
+    .song-cover { 
+        width: 60px; 
+        height: 60px; 
+    } 
+ 
+    .terminal { 
+        padding: 22px; 
+    } 
+ 
+    .alert-box, 
+    .uninstall-box, 
+    .recovery-box { 
+        padding: 28px 20px; 
+    } 
+}   
